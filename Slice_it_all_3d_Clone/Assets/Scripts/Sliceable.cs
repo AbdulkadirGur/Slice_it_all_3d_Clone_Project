@@ -44,6 +44,7 @@ public class Sliceable : MonoBehaviour, IKnifeHit
 
     private void Slice()
     {
+        FindAnyObjectByType<PlayerController>().PlaySlice();
         foreach (var part in _rigidbodies)
         {
             part.isKinematic = false;

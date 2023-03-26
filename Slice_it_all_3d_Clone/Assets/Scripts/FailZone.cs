@@ -14,6 +14,7 @@ public class FailZone : MonoBehaviour, IKnifeHit
 
     private void Lose(PlayerController playerController)
     {
+        FindAnyObjectByType<PlayerController>().PlayFail();
         playerController.Stuck();
         GameManager.Instance.SetGameState(GameState.Lose);
     }

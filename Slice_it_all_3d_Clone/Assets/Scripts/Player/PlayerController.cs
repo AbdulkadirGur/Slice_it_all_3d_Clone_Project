@@ -8,7 +8,13 @@ public class PlayerController : MonoBehaviour
     [Header("Jump Back")]
     [SerializeField] private Vector3 _jumpBackForce;
     [SerializeField] private Vector3 _spinBackTorque;
-    
+    [Header("Audio")]
+    [SerializeField] private AudioSource backgroundSound;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource failSound;
+    [SerializeField] private AudioSource sliceSound;
+    [SerializeField] private AudioSource stuckSound;
+
     private Rigidbody _rigidbody;
 
     private void Awake()
@@ -38,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     public void Stuck()
     {
+        stuckSound.Play();
         _rigidbody.isKinematic = true;
     }
 
@@ -59,7 +66,7 @@ public class PlayerController : MonoBehaviour
     private void Jump(int direction = 1)
     {
         Vector3 jumpForce = direction == 1 ? _jumpForthForce : _jumpBackForce;
-        
+        jumpSound.Play();
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.AddForce(jumpForce, ForceMode.Impulse);
     }
@@ -70,5 +77,12 @@ public class PlayerController : MonoBehaviour
         
         _rigidbody.angularVelocity = Vector3.zero;
         _rigidbody.AddTorque(spinTorque, ForceMode.Acceleration);
+    }
+    public void PlaySlice()
+    {
+        sliceSound.Play();
+    }public void PlayFail()
+    {
+        failSound.Play();
     }
 }
