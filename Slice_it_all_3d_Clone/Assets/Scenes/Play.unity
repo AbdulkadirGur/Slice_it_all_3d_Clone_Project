@@ -1310,6 +1310,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5193683381606446463, guid: 162599d77a5800a47bb36c0b88211d64,
+        type: 3}
+      propertyPath: m_Name
+      value: InputKontroller
+      objectReference: {fileID: 0}
     - target: {fileID: 5193683381611710226, guid: 162599d77a5800a47bb36c0b88211d64,
         type: 3}
       propertyPath: m_IsActive
@@ -1575,6 +1580,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2202070432578925915, guid: 5e2db8cee5010d64386c8731c245eff6,
         type: 3}
+    - target: {fileID: 8455514426594806871, guid: 162599d77a5800a47bb36c0b88211d64,
+        type: 3}
+      propertyPath: m_Name
+      value: AnlikKontroller
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
